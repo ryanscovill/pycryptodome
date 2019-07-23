@@ -228,7 +228,6 @@
    #error LTC_EAX_MODE requires CTR and LTC_OMAC mode
 #endif
 
-#define LTC_OCB_MODE
 #define LTC_CCM_MODE
 #define LTC_GCM_MODE
 

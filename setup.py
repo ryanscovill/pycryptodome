@@ -385,8 +385,6 @@ ext_modules = [
     Extension("Crypto.Cipher._raw_ctr",
         include_dirs=['src/'],
         sources=["src/raw_ctr.c"]),
-    Extension("Crypto.Cipher._raw_ocb",
-        sources=["src/raw_ocb.c"]),
 
     # Stream ciphers
     Extension("Crypto.Cipher._ARC4",

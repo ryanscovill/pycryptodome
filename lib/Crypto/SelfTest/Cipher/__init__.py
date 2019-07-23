@@ -40,7 +40,6 @@ def get_tests(config={}):
     from Crypto.SelfTest.Cipher import test_ChaCha20_Poly1305; tests += test_ChaCha20_Poly1305.get_tests(config=config)
     from Crypto.SelfTest.Cipher import test_pkcs1_15; tests += test_pkcs1_15.get_tests(config=config)
     from Crypto.SelfTest.Cipher import test_pkcs1_oaep; tests += test_pkcs1_oaep.get_tests(config=config)
-    from Crypto.SelfTest.Cipher import test_OCB;        tests += test_OCB.get_tests(config=config)
     from Crypto.SelfTest.Cipher import test_CBC;        tests += test_CBC.get_tests(config=config)
     from Crypto.SelfTest.Cipher import test_CFB;        tests += test_CFB.get_tests(config=config)
     from Crypto.SelfTest.Cipher import test_OpenPGP;    tests += test_OpenPGP.get_tests(config=config)

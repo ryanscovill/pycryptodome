@@ -32,7 +32,6 @@ Module's constants for the modes of operation supported with AES:
 :var MODE_EAX: :ref:`EAX Mode <eax_mode>`
 :var MODE_GCM: :ref:`Galois Counter Mode (GCM) <gcm_mode>`
 :var MODE_SIV: :ref:`Syntethic Initialization Vector (SIV) <siv_mode>`
-:var MODE_OCB: :ref:`Offset Code Book (OCB) <ocb_mode>`
 """
 
 import sys
@@ -163,7 +162,7 @@ def new(key, mode, *args, **kwargs):
 
         *   **nonce** (*bytes*, *bytearray*, *memoryview*) --
             (Only applicable for ``MODE_CCM``, ``MODE_EAX``, ``MODE_GCM``,
-            ``MODE_SIV``, ``MODE_OCB``, and ``MODE_CTR``).
+            ``MODE_SIV``, and ``MODE_CTR``).
 
             A value that must never be reused for any other encryption done
             with this key (except possibly for ``MODE_SIV``, see below).
@@ -174,9 +173,6 @@ def new(key, mode, *args, **kwargs):
             For ``MODE_CCM``, its length must be in the range **[7..13]**.
             Bear in mind that with CCM there is a trade-off between nonce
             length and maximum message size. Recommendation: **11** bytes.
-
-            For ``MODE_OCB``, its length must be in the range **[1..15]**
-            (recommended: **15**).
 
             For ``MODE_CTR``, its length must be in the range **[0..15]**
             (recommended: **8**).
@@ -242,7 +238,6 @@ MODE_CCM = 8
 MODE_EAX = 9
 MODE_SIV = 10
 MODE_GCM = 11
-MODE_OCB = 12
 
 # Size of a data block (in bytes)
 block_size = 16

@@ -10,7 +10,6 @@ from Crypto.Cipher._mode_ccm import CcmMode
 from Crypto.Cipher._mode_eax import EaxMode
 from Crypto.Cipher._mode_gcm import GcmMode
 from Crypto.Cipher._mode_siv import SivMode
-from Crypto.Cipher._mode_ocb import OcbMode
 
 AESMode = int
 
@@ -24,7 +23,6 @@ MODE_CCM: AESMode
 MODE_EAX: AESMode
 MODE_GCM: AESMode
 MODE_SIV: AESMode
-MODE_OCB: AESMode
 
 Buffer = Union[bytes, bytearray, memoryview]
 
@@ -41,7 +39,7 @@ def new(key: Buffer,
         use_aesni : bool = ...) -> \
         Union[EcbMode, CbcMode, CfbMode, OfbMode, CtrMode,
               OpenPgpMode, CcmMode, EaxMode, GcmMode,
-              SivMode, OcbMode]: ...
+              SivMode]: ...
 
 block_size: int
 key_size: Tuple[int, int, int]
